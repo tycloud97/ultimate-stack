@@ -1,10 +1,10 @@
-FROM quay.io/narendev/fishnode:alpine
+FROM node:14.19.1-alpine
 
 WORKDIR /app
 ENV PORT=4002
 
 
-COPY package.json .
+COPY package.json yarn.lock .
 RUN yarn install --production
 COPY . .
 

@@ -29,11 +29,6 @@ const { ticketId } = context.query;
 
 let urlvl = `/api/tickets/${ticketId}`;
 
-if (typeof window !== undefined) {
-  urlvl = `http://${process.env.NEXT_PUBLIC_BASEURL}/api/tickets/${ticketId}`;
-}
-
-
 const { data } = await client.get(urlvl);
 
   return { ticket: data };

@@ -21,7 +21,7 @@ spec:
       serviceAccountName: glotixz-authsrv
       containers:
         - name: auth
-          image: quay.io/ultimatestack/auth-svc:v1.2-beta
+          image: typrone1/auth-svc:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 4000

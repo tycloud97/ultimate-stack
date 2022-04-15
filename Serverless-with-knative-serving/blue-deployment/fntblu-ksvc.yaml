@@ -13,12 +13,12 @@ spec:
       serviceAccountName: glotixz-fntbluksvc
       containers:
         - name: nextjs-bluedepl
-          image: quay.io/ultimatestack/frontend:blue
+          image: typrone1/frontend:latest
           ports:
             - containerPort: 3001
           env:
             - name: NEXT_PUBLIC_BASEURL
-              value: 'e20b4706-9ba3-4496-a857-b8b531dd5a38.k8s.civo.com'
+              value: 192.168.49.2:32684
               # value: ''
             - name: NEXT_PUBLIC_STRIPE_KEY
               value: 'pk_test_51IWeSrSGJ6cJaAGg6Be4Ty2WnNfEwASS11HO2syVLoAJGesykRVi9K19rzTjTBUBySdezIcFwHzDLyp2oX4BIssn007PlgW6Za'

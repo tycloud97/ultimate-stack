@@ -19,12 +19,7 @@ AppComponent.getInitialProps = async (appContext) => {
 
   let urlvl = "/api/users/currentuser";
 
-  if (typeof window !== undefined) {
-    urlvl = `http://${process.env.NEXT_PUBLIC_BASEURL}/api/users/currentuser`;
-  }
-
   const { data } = await client.get(urlvl);
-
 
   let pageProps = {};
   if (appContext.Component.getInitialProps) {

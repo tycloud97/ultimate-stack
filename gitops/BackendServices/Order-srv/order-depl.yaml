@@ -21,7 +21,7 @@ spec:
       serviceAccountName: glotixz-ordersrv
       containers:
         - name: order
-          image: quay.io/ultimatestack/orders-svc:v1.2-beta
+          image: typrone1/orders-svc:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 4002

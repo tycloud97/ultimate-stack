@@ -21,7 +21,7 @@ spec:
       serviceAccountName: glotixz-expirationsrv
       containers:
         - name: expiration
-          image: quay.io/ultimatestack/expiration-svc:v1-beta
+          image: typrone1/expiration-svc:latest
           env:
             - name: NATS_CLIENT_ID
               valueFrom:

@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: tickets
-          image: quay.io/ultimatestack/ticket-svc:v1.2-beta
+          image: typrone1/ticket-svc:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 4001

@@ -36,11 +36,6 @@ LandingPage.getInitialProps = async (context, client, currentUser) => {
   
   let urlvl = "/api/tickets";
 
-  if (typeof window !== undefined) {
-    urlvl = `http://${process.env.NEXT_PUBLIC_BASEURL}/api/tickets`;
-  }
-
-
   const { data } = await client.get(urlvl);
   return { tickets: data };
 };

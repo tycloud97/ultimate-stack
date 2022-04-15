@@ -51,10 +51,6 @@ OrderShow.getInitialProps = async (context, client) => {
 
   let urlvl = `/api/orders/${orderId}`;
 
-  if (typeof window !== undefined) {
-    urlvl = `http://${process.env.NEXT_PUBLIC_BASEURL}/api/orders/${orderId}`;
-  }
-
   const { data } = await client.get(urlvl);
   return { order: data };
 };
