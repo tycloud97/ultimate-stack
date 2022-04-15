@@ -21,25 +21,25 @@ spec:
         - name: expiration-redis
           image: redis
           imagePullPolicy: Always
-          volumeMounts:
-            - name: data
-              mountPath: /data
-            - name: conf
-              mountPath: /etc/redis
-  volumeClaimTemplates:
-    - metadata:
-        name: data
-      spec:
-        storageClassName: longhorn
-        accessModes: ["ReadWriteOnce"]
-        resources:
-          requests:
-            storage: 500Mi
-    - metadata:
-        name: conf
-      spec:
-        storageClassName: longhorn
-        accessModes: ["ReadWriteOnce"]
-        resources:
-          requests:
-            storage: 10Mi
+  #         volumeMounts:
+  #           - name: data
+  #             mountPath: /data
+  #           - name: conf
+  #             mountPath: /etc/redis
+  # volumeClaimTemplates:
+  #   - metadata:
+  #       name: data
+  #     spec:
+  #       storageClassName: longhorn
+  #       accessModes: ["ReadWriteOnce"]
+  #       resources:
+  #         requests:
+  #           storage: 500Mi
+  #   - metadata:
+  #       name: conf
+  #     spec:
+  #       storageClassName: longhorn
+  #       accessModes: ["ReadWriteOnce"]
+  #       resources:
+  #         requests:
+  #           storage: 10Mi

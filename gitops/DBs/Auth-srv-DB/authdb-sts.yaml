@@ -21,15 +21,15 @@ spec:
       - name: authdb-mongo
         image: mongo
         imagePullPolicy: Always
-        volumeMounts:
-        - name: authdb-presistent
-          mountPath: /data/db
-  volumeClaimTemplates:
-  - metadata:
-      name: authdb-presistent
-    spec:
-      storageClassName: longhorn
-      accessModes: [ "ReadWriteOnce" ]
-      resources:
-        requests:
-          storage: 1Gi
+  #       volumeMounts:
+  #       - name: authdb-presistent
+  #         mountPath: /data/db
+  # volumeClaimTemplates:
+  # - metadata:
+  #     name: authdb-presistent
+  #   spec:
+  #     storageClassName: longhorn
+  #     accessModes: [ "ReadWriteOnce" ]
+  #     resources:
+  #       requests:
+  #         storage: 1Gi

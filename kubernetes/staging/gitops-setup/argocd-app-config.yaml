@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/narenarjun/ultimate-stack.git
+    repoURL: https://github.com/tycloud97/ultimate-stack.git
     targetRevision: HEAD
     path: gitops
     directory:

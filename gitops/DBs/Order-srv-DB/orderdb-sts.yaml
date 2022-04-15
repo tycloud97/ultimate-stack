@@ -21,15 +21,15 @@ spec:
       - name: orderdb-mongo
         image: mongo
         imagePullPolicy: Always
-        volumeMounts:
-        - name: orderdb-presistent
-          mountPath: /data/db
-  volumeClaimTemplates:
-  - metadata:
-      name: orderdb-presistent
-    spec:
-      storageClassName: longhorn
-      accessModes: [ "ReadWriteOnce" ]
-      resources:
-        requests:
-          storage: 1Gi
+  #       volumeMounts:
+  #       - name: orderdb-presistent
+  #         mountPath: /data/db
+  # volumeClaimTemplates:
+  # - metadata:
+  #     name: orderdb-presistent
+  #   spec:
+  #     storageClassName: longhorn
+  #     accessModes: [ "ReadWriteOnce" ]
+  #     resources:
+  #       requests:
+  #         storage: 1Gi

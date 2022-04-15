@@ -21,15 +21,15 @@ spec:
       - name: paymentdb-mongo
         image: mongo
         imagePullPolicy: Always
-        volumeMounts:
-        - name: paymentdb-presistent
-          mountPath: /data/db
-  volumeClaimTemplates:
-  - metadata:
-      name: paymentdb-presistent
-    spec:
-      storageClassName: longhorn
-      accessModes: [ "ReadWriteOnce" ]
-      resources:
-        requests:
-          storage: 1Gi
+  #       volumeMounts:
+  #       - name: paymentdb-presistent
+  #         mountPath: /data/db
+  # volumeClaimTemplates:
+  # - metadata:
+  #     name: paymentdb-presistent
+  #   spec:
+  #     storageClassName: longhorn
+  #     accessModes: [ "ReadWriteOnce" ]
+  #     resources:
+  #       requests:
+  #         storage: 1Gi
