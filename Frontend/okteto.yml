@@ -1,12 +1,14 @@
-name: microservice-ticketing-app-frontend
-autocreate: true
-image: quay.io/narendev/fishnode:1.0
-command: fish
+name: glotixz-frontend
+# autocreate: true
+image: node:14.19.1-alpine
+namespace: glotixz-backend
 sync:
 - .:/usr/src/app
 forward:
 - 9229:9229
 - 3000:3000
+- 3001:3001
+
 persistentVolume: {}
 annotations:
   sidecar.istio.io/inject: "false"

@@ -1,23 +1,35 @@
-docker build -t typrone1/ticket-svc .
+docker buildx build -t typrone1/ticket-svc . --platform linux/amd64
 docker push typrone1/ticket-svc
 
-docker build -t typrone1/auth-svc .
+docker buildx build -t typrone1/auth-svc . --platform linux/amd64
 docker push typrone1/auth-svc
 
-docker build -t typrone1/expiration-svc .
+docker buildx build -t typrone1/expiration-svc . --platform linux/amd64
 docker push typrone1/expiration-svc
 
-docker build -t typrone1/frontend .
+docker buildx build -t typrone1/frontend .
+
+docker buildx build -t typrone1/frontend . --platform linux/amd64
+
 docker run -d typrone1/frontend:latest
 docker push typrone1/frontend
 
-docker build -t typrone1/orders-svc .
+docker buildx build -t typrone1/orders-svc . --platform linux/amd64
 docker push typrone1/orders-svc
 
 
-docker build -t typrone1/payment-svc .
+docker buildx build -t typrone1/payment-svc . --platform linux/amd64
 docker push typrone1/payment-svc
 
+docker push typrone1/ticket-svc
+docker push typrone1/payment-svc
+docker push typrone1/orders-svc
+docker push typrone1/expiration-svc
+docker push typrone1/ticket-svc
+docker push typrone1/auth-svc
+
+
+axios.get('http://192.168.49.2:32684/api/orders').then(function (response) {console.log(response);})
 
 
 brew install kubeseal

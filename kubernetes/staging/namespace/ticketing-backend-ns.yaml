@@ -3,4 +3,4 @@ kind: Namespace
 metadata:
   name: glotixz-backend
   labels:
-    # istio-injection: enabled
+    istio-injection: enabled
