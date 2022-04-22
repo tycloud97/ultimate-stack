@@ -28,8 +28,9 @@ docker push typrone1/expiration-svc
 docker push typrone1/ticket-svc
 docker push typrone1/auth-svc
 
-
-axios.get('http://192.168.49.2:32684/api/orders').then(function (response) {console.log(response);})
+const axios = require('axios').default;
+axios.get('http://192.168.77.160:8080/api/users/currentuser').then(function (response) {console.log(response);})
+axios.get('http://a482a497403784e66a2a70a77561dd1c-1139531466.ap-southeast-1.elb.amazonaws.com/api/users/currentuser').then(function (response) {console.log(response);})
 
 
 brew install kubeseal
